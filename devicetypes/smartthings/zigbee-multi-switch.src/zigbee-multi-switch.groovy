@@ -63,11 +63,13 @@ metadata {
 def installed() {
 	createChildDevices()
         refresh()
+	updateDataValue("onOff", "catchall")
 }
 
 def updated() {
 	log.debug "updated()"
         refresh()
+	updateDataValue("onOff", "catchall")
 }
 
 def parse(String description) {
